@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Bellybutton Biodiversity</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
 </head>
 
 <body>
@@ -25,7 +26,6 @@
           <!-- <select id="selDataset"></select> -->
         
               <select id="selDataset" onchange="optionChanged(this.value)"></select>
-          
 
         </div>
         <div class="panel panel-primary">
@@ -33,25 +33,33 @@
             <h3 class="panel-title">Demographic Info</h3>
           </div>
           <div id="sample-metadata" class="panel-body"></div>
+
         </div>
       </div>
       <div class="col-md-5">
         <div id="bar"></div>
       </div>
       <div class="col-md-5">
-        <div id="gauge"></div>
+        <div id="mygauge"></div>
       </div>
     </div>
     <div class="row">
       <div class="col-md-12">
         <div id="bubble"></div>
+        <div id="myDiv"></div>
       </div>
     </div>
-  </div>
+
+    <div class="container">
+        <canvas id="myChart"></canvas>
+    </div>
+ 
+
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <script src="plots.js"></script>
+  <script src="samples.json"></script>
 
 </body>
 
